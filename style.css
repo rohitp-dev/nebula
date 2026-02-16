@@ -24,6 +24,8 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -33,6 +35,8 @@ body {
     overflow-x: hidden;
     background: var(--white);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 320px;
 }
 
 /* Selection Style */
@@ -517,7 +521,19 @@ section {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
 }
 
 h2 {
@@ -5462,4 +5478,662 @@ footer .whatsapp-btn {
     margin-top: 10px;
     position: relative;
     left: 0;
+}
+
+/* ============================================
+   COMPREHENSIVE RESPONSIVE IMPROVEMENTS
+   ============================================ */
+
+/* Page Header Responsive Styles */
+@media (max-width: 992px) {
+    .page-header {
+        padding: 5rem 2rem !important;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .page-header p {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 4rem 1.5rem !important;
+    }
+
+    .page-header h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .page-header p {
+        font-size: 1rem !important;
+        margin-top: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 3rem 1rem !important;
+    }
+
+    .page-header h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .page-header p {
+        font-size: 0.95rem !important;
+    }
+}
+
+/* Services Page Grid Responsive */
+@media (max-width: 1200px) {
+    .services-page-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .services-page-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+    }
+
+    .services-section {
+        padding: 5rem 1.5rem;
+    }
+
+    .services-page-intro h2 {
+        font-size: 2rem !important;
+    }
+
+    .services-page-intro p {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-page-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    .service-card-page {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .services-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .services-page-intro h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .services-page-intro p {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-section {
+        padding: 3rem 1rem;
+    }
+
+    .service-card-page {
+        padding: 1.5rem;
+    }
+
+    .service-card-content h3 {
+        font-size: 1.3rem !important;
+    }
+
+    .service-card-content p {
+        font-size: 0.95rem !important;
+    }
+
+    .service-card-icon {
+        font-size: 2.5rem !important;
+    }
+}
+
+/* Hero Section Contact Box Responsive */
+@media (max-width: 768px) {
+    .hero-contact {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        padding: 1.5rem 2rem !important;
+    }
+
+    .contact-item {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .contact-value {
+        font-size: 0.95rem !important;
+        white-space: normal !important;
+        word-break: break-word;
+    }
+
+    .contact-label {
+        font-size: 0.75rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-contact {
+        padding: 1.25rem 1.5rem !important;
+    }
+
+    .contact-icon svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .contact-value {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Footer Responsive Improvements */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .footer-section {
+        text-align: left;
+    }
+
+    .social-links {
+        justify-content: flex-start !important;
+    }
+}
+
+/* Training Cards Responsive */
+@media (max-width: 992px) {
+    .training-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .training-cards {
+        grid-template-columns: 1fr !important;
+    }
+
+    .training-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+/* Plans Page Responsive */
+@media (max-width: 992px) {
+    .plans-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+/* About Page Responsive */
+@media (max-width: 992px) {
+    .about-content {
+        grid-template-columns: 1fr !important;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-stats {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Contact Form Responsive */
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        grid-template-columns: 1fr !important;
+    }
+
+    .form-group.full-width,
+    .form-group {
+        grid-column: span 1 !important;
+    }
+}
+
+/* Process Page Responsive */
+@media (max-width: 768px) {
+    .process-step-box {
+        padding: 2rem 1.5rem !important;
+    }
+
+    .step-arrow {
+        display: none;
+    }
+}
+
+/* Industries Page Responsive */
+@media (max-width: 992px) {
+    .industries-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .industries-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Ensure all images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent horizontal scroll */
+body {
+    overflow-x: hidden !important;
+}
+
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Fix text overflow on mobile */
+@media (max-width: 768px) {
+    h1, h2, h3, h4, h5, h6 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+/* Button Responsive */
+@media (max-width: 480px) {
+    .btn-primary,
+    .btn-secondary,
+    .service-card-link,
+    .hero-btn {
+        padding: 0.9rem 1.5rem !important;
+        font-size: 0.95rem !important;
+    }
+}
+
+/* Table Responsive */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Sticky Elements Adjustments for Mobile */
+@media (max-width: 768px) {
+    .talent-pool-sticky-trigger {
+        right: 15px !important;
+        bottom: 15px !important;
+        padding: 12px 20px !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* Feature Cards Grid */
+@media (max-width: 768px) {
+    .features-grid,
+    .benefits-grid,
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+}
+
+/* Modal Improvements for Small Screens */
+@media (max-width: 480px) {
+    .modal-container {
+        width: 100% !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        max-height: 100vh !important;
+    }
+
+    .modal-close-btn {
+        top: 15px !important;
+        right: 15px !important;
+        font-size: 1.5rem !important;
+    }
+}
+
+/* ============================================
+   TOUCH TARGET IMPROVEMENTS FOR MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    /* Ensure all clickable elements are at least 44x44px (Apple HIG recommendation) */
+    button,
+    .btn,
+    .btn-primary,
+    .btn-secondary,
+    a.contact-btn,
+    .service-card-link,
+    .menu-toggle {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Improve link spacing in navigation */
+    nav a {
+        padding: 0.75rem 1rem !important;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Footer links should have better spacing */
+    footer a {
+        padding: 0.5rem 0;
+        display: inline-block;
+    }
+
+    /* Social media icons touch targets */
+    .social-links a {
+        min-width: 48px !important;
+        min-height: 48px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-links span {
+        width: 48px !important;
+        height: 48px !important;
+    }
+}
+
+/* ============================================
+   FORM ELEMENTS RESPONSIVE IMPROVEMENTS
+   ============================================ */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    select {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        min-height: 48px;
+    }
+
+    textarea {
+        min-height: 120px !important;
+    }
+
+    /* Form group spacing */
+    .form-group,
+    .talent-form-group {
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Labels should be more prominent on mobile */
+    label {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
+/* ============================================
+   LOADING & PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+/* Lazy loading images - prevent layout shift */
+img[loading="lazy"] {
+    min-height: 200px;
+    background: var(--bg-light);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   LANDSCAPE ORIENTATION FIXES
+   ============================================ */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: auto !important;
+        padding: 4rem 2rem !important;
+    }
+
+    .page-header {
+        padding: 3rem 2rem !important;
+    }
+
+    .modal-container {
+        max-height: 95vh !important;
+        margin: 2.5vh auto !important;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    header,
+    footer,
+    .menu-toggle,
+    .contact-btn,
+    .hero-btn,
+    .service-card-link,
+    .talent-pool-sticky-trigger,
+    .modal-overlay {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+}
+
+/* ============================================
+   HIGH RESOLUTION DISPLAYS
+   ============================================ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Ensure icons and small images look crisp */
+    .service-card-icon,
+    .contact-icon,
+    .feature-icon {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* ============================================
+   TABLET SPECIFIC ADJUSTMENTS (768px - 1024px)
+   ============================================ */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .services-page-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem;
+    }
+
+    .training-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Hero adjustments for tablets */
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* ============================================
+   EXTRA SMALL DEVICES (< 375px)
+   ============================================ */
+@media (max-width: 375px) {
+    .page-header h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .services-page-intro h2,
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .service-card-page {
+        padding: 1.25rem !important;
+    }
+
+    .hero-contact {
+        padding: 1rem !important;
+    }
+
+    .contact-value {
+        font-size: 0.85rem !important;
+    }
+
+    .footer-content {
+        gap: 1.5rem !important;
+    }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (OPTIONAL)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment to enable dark mode support
+    :root {
+        --primary-color: #4d94ff;
+        --text-dark: #f0f0f0;
+        --text-light: #b0b0b0;
+        --bg-light: #1a1a1a;
+        --white: #0d0d0d;
+    }
+
+    body {
+        background: #0d0d0d;
+        color: #f0f0f0;
+    }
+
+    header {
+        background: rgba(13, 13, 13, 0.95);
+    }
+
+    .service-card-page,
+    .testimonial-card,
+    footer {
+        background: #1a1a1a;
+        border-color: #2a2a2a;
+    }
+    */
+}
+
+/* ============================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================ */
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Skip to main content link (add to HTML if needed) */
+.skip-to-main {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-to-main:focus {
+    top: 0;
+}
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
