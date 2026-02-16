@@ -58,6 +58,18 @@ header {
     transition: var(--transition);
 }
 
+@media (max-width: 768px) {
+    header {
+        padding: 0.75rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.6rem 0;
+    }
+}
+
 .header-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -82,6 +94,17 @@ header {
     letter-spacing: -0.5px;
     transition: var(--transition);
     cursor: pointer;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
 }
 
 .logo:hover {
@@ -2074,6 +2097,11 @@ footer::before {
             position: relative;
         }
 
+        .logo img {
+            height: 35px !important;
+        }
+
+        /* Show menu toggle button on mobile */
         .menu-toggle {
             display: flex;
             flex-direction: column;
@@ -2106,6 +2134,12 @@ footer::before {
             transform: translateY(-9px) rotate(-45deg);
         }
 
+        /* Hide contact button on mobile */
+        .header-container .contact-btn,
+        header .contact-btn {
+            display: none !important;
+        }
+
         nav {
             position: absolute;
             top: 100%;
@@ -2122,20 +2156,7 @@ footer::before {
 
         nav.active {
             max-height: 500px;
-            /* Adjust based on content */
             padding: 1.5rem 0;
-        }
-
-        .testimonials-grid {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .testimonial-card {
-            padding: 2.5rem 2rem;
         }
 
         nav ul {
@@ -2151,15 +2172,22 @@ footer::before {
             padding: 0.5rem 0;
         }
 
-        .contact-btn {
-            display: none;
-            /* Hide header button on mobile, assume it's in footer or add to menu if needed */
-        }
-
         /* Ensure logo stays on left and hamburger on right */
         .header-container {
             flex-direction: row;
             justify-content: space-between;
+        }
+
+        .testimonials-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial-card {
+            padding: 2.5rem 2rem;
         }
 
         /* Fix Hero Section for Mobile */
@@ -2244,6 +2272,21 @@ footer::before {
 
     nav a {
         font-size: 0.9rem;
+    }
+
+    /* Logo even smaller on very small devices */
+    .logo img {
+        height: 30px !important;
+    }
+
+    /* Slightly smaller hamburger on very small screens */
+    .menu-toggle {
+        width: 28px !important;
+        height: 20px !important;
+    }
+
+    .header-container {
+        padding: 0 1rem !important;
     }
 
     .hero h1 {
