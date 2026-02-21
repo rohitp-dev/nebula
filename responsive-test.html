@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Test - Nebula Consultancy Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 1200px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .info-value {
+            color: #667eea;
+            font-weight: 700;
+            font-family: 'Courier New', monospace;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .status-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .status-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .status-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-card .range {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .test-section {
+            background: #fff;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .test-section h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .test-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .test-item:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .test-item.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        .alert-danger {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .status-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .device-indicator {
+            text-align: center;
+            padding: 1rem;
+            background: #667eea;
+            color: white;
+            border-radius: 12px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Responsive Design Test Dashboard</h1>
+        <p class="subtitle">Testing Nebula Consultancy Services Website Responsiveness</p>
+
+        <div class="device-indicator" id="deviceType">
+            Loading...
+        </div>
+
+        <div class="info-box">
+            <div class="info-row">
+                <span class="info-label">Current Width:</span>
+                <span class="info-value" id="width">-</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Current Height:</span>
+                <span class="info-value" id="height">-</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Orientation:</span>
+                <span class="info-value" id="orientation">-</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Device Pixel Ratio:</span>
+                <span class="info-value" id="dpr">-</span>
+            </div>
+        </div>
+
+        <div class="status-grid">
+            <div class="status-card">
+                <h3>📱 Mobile</h3>
+                <div class="value" id="mobileStatus">-</div>
+                <div class="range">320px - 768px</div>
+            </div>
+            <div class="status-card">
+                <h3>📱 Tablet</h3>
+                <div class="value" id="tabletStatus">-</div>
+                <div class="range">768px - 992px</div>
+            </div>
+            <div class="status-card">
+                <h3>💻 Desktop</h3>
+                <div class="value" id="desktopStatus">-</div>
+                <div class="range">992px+</div>
+            </div>
+        </div>
+
+        <div id="statusAlert"></div>
+
+        <div class="test-section">
+            <h3>🎯 Responsive Breakpoint Tests</h3>
+            <div class="test-grid">
+                <div class="test-item" data-bp="320">
+                    <strong>320px</strong><br>
+                    <small>Mobile SM</small>
+                </div>
+                <div class="test-item" data-bp="375">
+                    <strong>375px</strong><br>
+                    <small>Mobile MD</small>
+                </div>
+                <div class="test-item" data-bp="480">
+                    <strong>480px</strong><br>
+                    <small>Mobile LG</small>
+                </div>
+                <div class="test-item" data-bp="768">
+                    <strong>768px</strong><br>
+                    <small>Tablet</small>
+                </div>
+                <div class="test-item" data-bp="992">
+                    <strong>992px</strong><br>
+                    <small>Laptop</small>
+                </div>
+                <div class="test-item" data-bp="1200">
+                    <strong>1200px</strong><br>
+                    <small>Desktop</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>🧪 Quick Navigation Tests</h3>
+            <div class="btn-group">
+                <button class="btn" onclick="window.open('index.html', '_blank')">Test Home Page</button>
+                <button class="btn" onclick="window.open('services.html', '_blank')">Test Services Page</button>
+                <button class="btn" onclick="window.open('about.html', '_blank')">Test About Page</button>
+                <button class="btn" onclick="window.open('contact.html', '_blank')">Test Contact Page</button>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>📋 Responsive Checklist</h3>
+            <div style="line-height: 2;">
+                ✅ No horizontal scroll<br>
+                ✅ Text is readable (min 14px)<br>
+                ✅ Touch targets 44x44px minimum<br>
+                ✅ Forms work on all devices<br>
+                ✅ Navigation accessible<br>
+                ✅ Images scale properly<br>
+                ✅ Content hierarchy maintained<br>
+                ✅ Performance optimized
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateResponsiveInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const orientation = width > height ? 'Landscape' : 'Portrait';
+            const dpr = window.devicePixelRatio || 1;
+
+            // Update info
+            document.getElementById('width').textContent = width + 'px';
+            document.getElementById('height').textContent = height + 'px';
+            document.getElementById('orientation').textContent = orientation;
+            document.getElementById('dpr').textContent = dpr.toFixed(2);
+
+            // Determine device type
+            let deviceType = '';
+            let alertType = '';
+            let alertMessage = '';
+
+            if (width < 480) {
+                deviceType = '📱 Mobile Small';
+                document.getElementById('mobileStatus').textContent = '✓ Active';
+                document.getElementById('tabletStatus').textContent = '-';
+                document.getElementById('desktopStatus').textContent = '-';
+                alertType = 'alert-success';
+                alertMessage = 'Mobile Small view active. All mobile optimizations should be visible.';
+            } else if (width < 768) {
+                deviceType = '📱 Mobile Large';
+                document.getElementById('mobileStatus').textContent = '✓ Active';
+                document.getElementById('tabletStatus').textContent = '-';
+                document.getElementById('desktopStatus').textContent = '-';
+                alertType = 'alert-success';
+                alertMessage = 'Mobile Large view active. Testing mobile responsiveness.';
+            } else if (width < 992) {
+                deviceType = '📱 Tablet';
+                document.getElementById('mobileStatus').textContent = '-';
+                document.getElementById('tabletStatus').textContent = '✓ Active';
+                document.getElementById('desktopStatus').textContent = '-';
+                alertType = 'alert-warning';
+                alertMessage = 'Tablet view active. Check 2-column layouts and navigation.';
+            } else if (width < 1200) {
+                deviceType = '💻 Laptop';
+                document.getElementById('mobileStatus').textContent = '-';
+                document.getElementById('tabletStatus').textContent = '-';
+                document.getElementById('desktopStatus').textContent = '✓ Active';
+                alertType = 'alert-warning';
+                alertMessage = 'Laptop view active. Full desktop features with optimized spacing.';
+            } else {
+                deviceType = '🖥️ Desktop';
+                document.getElementById('mobileStatus').textContent = '-';
+                document.getElementById('tabletStatus').textContent = '-';
+                document.getElementById('desktopStatus').textContent = '✓ Active';
+                alertType = 'alert-success';
+                alertMessage = 'Desktop view active. Full layout with all columns visible.';
+            }
+
+            document.getElementById('deviceType').textContent = deviceType;
+
+            // Update alert
+            const alertDiv = document.getElementById('statusAlert');
+            alertDiv.className = `alert ${alertType}`;
+            alertDiv.textContent = alertMessage;
+
+            // Update breakpoint indicators
+            document.querySelectorAll('.test-item').forEach(item => {
+                const bp = parseInt(item.dataset.bp);
+                if (width >= bp && width < (bp + 200)) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        // Initial update
+        updateResponsiveInfo();
+
+        // Update on resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(updateResponsiveInfo, 100);
+        });
+
+        // Update on orientation change
+        window.addEventListener('orientationchange', () => {
+            setTimeout(updateResponsiveInfo, 200);
+        });
+
+        // Check for horizontal scroll
+        setInterval(() => {
+            const hasHorizontalScroll = document.documentElement.scrollWidth > document.documentElement.clientWidth;
+            if (hasHorizontalScroll) {
+                console.warn('⚠️ Horizontal scroll detected! Width:', document.documentElement.scrollWidth);
+            }
+        }, 2000);
+    </script>
+</body>
+</html>

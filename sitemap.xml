@@ -46,66 +46,12 @@
         <priority>0.7</priority>
     </url>
     
-    <!-- Careers & Training -->
+    <!-- Careers -->
     <url>
         <loc>https://www.hirevantis.com/career.html</loc>
         <lastmod>2024-12-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.hirevantis.com/training.html</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.hirevantis.com/training-business-analyst.html</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.hirevantis.com/training-data-analyst.html</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.hirevantis.com/training-data-scientist.html</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.hirevantis.com/training-machine-learning.html</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.hirevantis.com/training-java-developer.html</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.hirevantis.com/training-python-developer.html</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.hirevantis.com/training-software-developer.html</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.hirevantis.com/training-project-manager.html</loc>
-        <lastmod>2025-12-29</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.hirevantis.com/news.html</loc>
